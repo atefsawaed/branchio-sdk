@@ -9,10 +9,6 @@ const request = axios.create({
 })
 
 const branch = ({ key, appId, secret }) => {
-  if (!appId && !key) {
-    throw new Error('Initialize branch sdk with either appId or branchKey')
-  }
-
   const credentials = {
     app_id: appId,
     branch_key: key,
